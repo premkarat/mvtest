@@ -662,7 +662,7 @@
 <span class="sd">            If the pattern was not a list this returns index 0</span>
 <span class="sd">            on a successful match.</span>
 
-<span class="sd">            False: on Failure</span>
+<span class="sd">            None: on Failure</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            cmd (string): command to run.</span>
@@ -698,7 +698,7 @@
             <span class="k">if</span> <span class="n">cmd</span><span class="p">:</span>
                 <span class="n">log</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shell</span><span class="o">.</span><span class="n">before</span><span class="p">)</span>
             <span class="n">log</span><span class="o">.</span><span class="n">tfail</span><span class="p">(</span><span class="s1">&#39;PATTERN NOT FOUND: </span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">pattern</span><span class="p">)</span>
-            <span class="k">return</span> <span class="kc">False</span></div>
+            <span class="k">return</span> <span class="kc">None</span></div>
 
 <div class="viewcode-block" id="ExpectShell.match_groups"><a class="viewcode-back" href="../../apis.html#apis.utils.ExpectShell.match_groups">[docs]</a>    <span class="k">def</span> <span class="nf">match_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -718,7 +718,7 @@
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">shell</span><span class="o">.</span><span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
         <span class="k">except</span><span class="p">:</span>
             <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;Failed to match groups&#39;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="kc">False</span></div>
+            <span class="k">return</span> <span class="kc">None</span></div>
 
 <div class="viewcode-block" id="ExpectShell.terminate"><a class="viewcode-back" href="../../apis.html#apis.utils.ExpectShell.terminate">[docs]</a>    <span class="k">def</span> <span class="nf">terminate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
